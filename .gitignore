@@ -1,0 +1,14 @@
+node_modules/
+.next/
+logs/
+mongodb_data/
+.env
+*.log
+.DS_Store
+.tmp_db_dump_*/
+public/uploads/
+backups/
+mongodb_backup_*
+*.tar
+*.rar
+*.zip

@@ -1,0 +1,517 @@
+/* ============================================
+   DESIGN SYSTEM ALTERNATIF - SocialHub Global V5
+   Version Alternative - Style Moderne & Audacieux
+   ============================================ */
+
+:root {
+  /* ============================================
+     PALETTE ALTERNATIVE - COULEURS VIBRANTES
+     ============================================ */
+  
+  /* Primary - Cyan/Teal (plus moderne) */
+  --color-primary-50: #ecfeff;
+  --color-primary-100: #cffafe;
+  --color-primary-200: #a5f3fc;
+  --color-primary-300: #67e8f9;
+  --color-primary-400: #22d3ee;
+  --color-primary-500: #06b6d4;
+  --color-primary-600: #0891b2;
+  --color-primary-700: #0e7490;
+  --color-primary-800: #155e75;
+  --color-primary-900: #164e63;
+  
+  --color-primary: var(--color-primary-500);
+  --color-primary-dark: var(--color-primary-600);
+  --color-primary-light: var(--color-primary-400);
+  
+  /* Secondary - Rose/Magenta (plus dynamique) */
+  --color-secondary-50: #fdf2f8;
+  --color-secondary-100: #fce7f3;
+  --color-secondary-200: #fbcfe8;
+  --color-secondary-300: #f9a8d4;
+  --color-secondary-400: #f472b6;
+  --color-secondary-500: #ec4899;
+  --color-secondary-600: #db2777;
+  --color-secondary-700: #be185d;
+  --color-secondary-800: #9f1239;
+  --color-secondary-900: #831843;
+  
+  --color-secondary: var(--color-secondary-500);
+  --color-secondary-dark: var(--color-secondary-600);
+  --color-secondary-light: var(--color-secondary-400);
+  
+  /* Accent - Orange/Vibrant */
+  --color-accent-50: #fff7ed;
+  --color-accent-100: #ffedd5;
+  --color-accent-200: #fed7aa;
+  --color-accent-300: #fdba74;
+  --color-accent-400: #fb923c;
+  --color-accent-500: #f97316;
+  --color-accent-600: #ea580c;
+  --color-accent-700: #c2410c;
+  --color-accent-800: #9a3412;
+  --color-accent-900: #7c2d12;
+  
+  --color-accent: var(--color-accent-500);
+  
+  /* ============================================
+     COULEURS FONCTIONNELLES (Plus vibrantes)
+     ============================================ */
+  
+  /* Success - Emerald (plus frais) */
+  --color-success-50: #ecfdf5;
+  --color-success-100: #d1fae5;
+  --color-success-200: #a7f3d0;
+  --color-success-300: #6ee7b7;
+  --color-success-400: #34d399;
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+  --color-success-700: #047857;
+  --color-success-800: #065f46;
+  --color-success-900: #064e3b;
+  
+  --color-success: var(--color-success-500);
+  
+  /* Warning - Amber (plus chaleureux) */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+  
+  --color-warning: var(--color-warning-500);
+  
+  /* Error - Rose (plus doux) */
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+  
+  --color-error: var(--color-error-500);
+  
+  /* Info - Sky Blue (plus lumineux) */
+  --color-info-50: #f0f9ff;
+  --color-info-100: #e0f2fe;
+  --color-info-200: #bae6fd;
+  --color-info-300: #7dd3fc;
+  --color-info-400: #38bdf8;
+  --color-info-500: #0ea5e9;
+  --color-info-600: #0284c7;
+  --color-info-700: #0369a1;
+  --color-info-800: #075985;
+  --color-info-900: #0c4a6e;
+  
+  --color-info: var(--color-info-500);
+  
+  /* ============================================
+     COULEURS NEUTRES (Plus contrastées)
+     ============================================ */
+  
+  --color-white: #ffffff;
+  --color-black: #0a0a0a;
+  
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  
+  /* ============================================
+     DÉGRADÉS MODERNES & AUDACIEUX
+     ============================================ */
+  
+  --gradient-primary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+  --gradient-secondary: linear-gradient(135deg, #ec4899 0%, #f97316 50%, #fbbf24 100%);
+  --gradient-success: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+  --gradient-warm: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+  --gradient-cool: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  --gradient-sunset: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%);
+  --gradient-ocean: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%);
+  
+  /* ============================================
+     OMBRES COLORÉES & MODERNES
+     ============================================ */
+  
+  --shadow-primary: 0 10px 40px -10px rgba(6, 182, 212, 0.4), 0 4px 6px -2px rgba(6, 182, 212, 0.2);
+  --shadow-secondary: 0 10px 40px -10px rgba(236, 72, 153, 0.4), 0 4px 6px -2px rgba(236, 72, 153, 0.2);
+  --shadow-accent: 0 10px 40px -10px rgba(249, 115, 22, 0.4), 0 4px 6px -2px rgba(249, 115, 22, 0.2);
+  --shadow-success: 0 10px 40px -10px rgba(16, 185, 129, 0.4), 0 4px 6px -2px rgba(16, 185, 129, 0.2);
+  --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.3);
+  --shadow-glow-secondary: 0 0 20px rgba(236, 72, 153, 0.3);
+  
+  /* ============================================
+     BORDURES & RAYONS (Plus arrondis)
+     ============================================ */
+  
+  --border-radius-sm: 0.5rem;
+  --border-radius-base: 0.75rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 1.25rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-2xl: 2rem;
+  --border-radius-3xl: 3rem;
+  --border-radius-full: 9999px;
+  
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-3: 3px;
+  
+  /* ============================================
+     ESPACEMENTS (Plus généreux)
+     ============================================ */
+  
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  
+  /* ============================================
+     TYPOGRAPHIE (Plus moderne)
+     ============================================ */
+  
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-family-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  
+  /* ============================================
+     TRANSITIONS (Plus fluides)
+     ============================================ */
+  
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* ============================================
+     EFFETS SPÉCIAUX
+     ============================================ */
+  
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-blur: blur(20px);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  
+  --backdrop-blur: blur(12px);
+  
+  /* ============================================
+     Z-INDEX
+     ============================================ */
+  
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-toast: 800;
+}
+
+/* ============================================
+   COMPOSANTS ALTERNATIFS - BOUTONS
+   ============================================ */
+
+.btn-alternative {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-6);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--border-radius-xl);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.btn-alternative::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-alternative:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-alternative-primary {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-alternative-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary), var(--shadow-glow);
+}
+
+.btn-alternative-secondary {
+  background: var(--gradient-secondary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-secondary);
+}
+
+.btn-alternative-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-secondary), var(--shadow-glow-secondary);
+}
+
+.btn-alternative-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-alternative-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   COMPOSANTS ALTERNATIFS - CARTES
+   ============================================ */
+
+.card-alternative {
+  background: var(--color-white);
+  border-radius: var(--border-radius-2xl);
+  padding: var(--spacing-6);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-base);
+  border: 1px solid var(--color-gray-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-alternative::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.card-alternative:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-alternative:hover::before {
+  transform: scaleX(1);
+}
+
+.card-alternative-gradient {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border: none;
+}
+
+.card-alternative-glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* ============================================
+   COMPOSANTS ALTERNATIFS - BADGES
+   ============================================ */
+
+.badge-alternative {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.badge-alternative-primary {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-primary);
+}
+
+.badge-alternative-secondary {
+  background: var(--gradient-secondary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-secondary);
+}
+
+.badge-alternative-accent {
+  background: var(--gradient-warm);
+  color: var(--color-white);
+  box-shadow: var(--shadow-accent);
+}
+
+/* ============================================
+   ANIMATIONS SPÉCIALES
+   ============================================ */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* ============================================
+   UTILITAIRES ALTERNATIFS
+   ============================================ */
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--font-weight-bold);
+}
+
+.gradient-text-secondary {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--border-radius-xl);
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius-xl);
+  padding: 2px;
+  background: var(--gradient-primary);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .card-alternative {
+    padding: var(--spacing-4);
+    border-radius: var(--border-radius-xl);
+  }
+  
+  .btn-alternative {
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--font-size-xs);
+  }
+}
+
+

@@ -1,0 +1,574 @@
+/* ============================================
+   DESIGN SYSTEM PROFESSIONNEL - SocialHub Global V5
+   Version Professionnelle - Style Moderne & Élégant
+   ============================================ */
+
+:root {
+  /* ============================================
+     PALETTE PROFESSIONNELLE - COULEURS SOBRES
+     ============================================ */
+  
+  /* Primary - Navy/Deep Blue (professionnel) */
+  --color-primary-50: #f0f4f8;
+  --color-primary-100: #d9e2ec;
+  --color-primary-200: #bcccdc;
+  --color-primary-300: #9fb3c8;
+  --color-primary-400: #829ab1;
+  --color-primary-500: #627d98;
+  --color-primary-600: #486581;
+  --color-primary-700: #334e68;
+  --color-primary-800: #243b53;
+  --color-primary-900: #102a43;
+  
+  --color-primary: var(--color-primary-700);
+  --color-primary-dark: var(--color-primary-800);
+  --color-primary-light: var(--color-primary-500);
+  
+  /* Secondary - Slate/Gray (élégant) */
+  --color-secondary-50: #f8fafc;
+  --color-secondary-100: #f1f5f9;
+  --color-secondary-200: #e2e8f0;
+  --color-secondary-300: #cbd5e1;
+  --color-secondary-400: #94a3b8;
+  --color-secondary-500: #64748b;
+  --color-secondary-600: #475569;
+  --color-secondary-700: #334155;
+  --color-secondary-800: #1e293b;
+  --color-secondary-900: #0f172a;
+  
+  --color-secondary: var(--color-secondary-600);
+  --color-secondary-dark: var(--color-secondary-700);
+  --color-secondary-light: var(--color-secondary-400);
+  
+  /* Accent - Teal (sophistiqué) */
+  --color-accent-50: #f0fdfa;
+  --color-accent-100: #ccfbf1;
+  --color-accent-200: #99f6e4;
+  --color-accent-300: #5eead4;
+  --color-accent-400: #2dd4bf;
+  --color-accent-500: #14b8a6;
+  --color-accent-600: #0d9488;
+  --color-accent-700: #0f766e;
+  --color-accent-800: #115e59;
+  --color-accent-900: #134e4a;
+  
+  --color-accent: var(--color-accent-600);
+  
+  /* ============================================
+     COULEURS FONCTIONNELLES (Sobres)
+     ============================================ */
+  
+  /* Success - Emerald (discret) */
+  --color-success-50: #ecfdf5;
+  --color-success-100: #d1fae5;
+  --color-success-200: #a7f3d0;
+  --color-success-300: #6ee7b7;
+  --color-success-400: #34d399;
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+  --color-success-700: #047857;
+  --color-success-800: #065f46;
+  --color-success-900: #064e3b;
+  
+  --color-success: var(--color-success-600);
+  
+  /* Warning - Amber (raffiné) */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+  
+  --color-warning: var(--color-warning-600);
+  
+  /* Error - Red (contrôlé) */
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+  
+  --color-error: var(--color-error-600);
+  
+  /* Info - Blue (professionnel) */
+  --color-info-50: #eff6ff;
+  --color-info-100: #dbeafe;
+  --color-info-200: #bfdbfe;
+  --color-info-300: #93c5fd;
+  --color-info-400: #60a5fa;
+  --color-info-500: #3b82f6;
+  --color-info-600: #2563eb;
+  --color-info-700: #1d4ed8;
+  --color-info-800: #1e40af;
+  --color-info-900: #1e3a8a;
+  
+  --color-info: var(--color-info-600);
+  
+  /* ============================================
+     COULEURS NEUTRES (Élégantes)
+     ============================================ */
+  
+  --color-white: #ffffff;
+  --color-black: #0a0a0a;
+  
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  
+  /* ============================================
+     DÉGRADÉS PROFESSIONNELS (Subtils)
+     ============================================ */
+  
+  --gradient-primary: linear-gradient(135deg, #334e68 0%, #486581 50%, #627d98 100%);
+  --gradient-secondary: linear-gradient(135deg, #475569 0%, #64748b 50%, #94a3b8 100%);
+  --gradient-accent: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #2dd4bf 100%);
+  --gradient-elegant: linear-gradient(135deg, #334e68 0%, #0d9488 100%);
+  --gradient-subtle: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --gradient-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
+  
+  /* ============================================
+     OMBRES PROFESSIONNELLES (Discrètes)
+     ============================================ */
+  
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+  
+  --shadow-primary: 0 4px 12px -2px rgba(51, 78, 104, 0.15), 0 2px 4px -1px rgba(51, 78, 104, 0.1);
+  --shadow-accent: 0 4px 12px -2px rgba(13, 148, 136, 0.15), 0 2px 4px -1px rgba(13, 148, 136, 0.1);
+  
+  /* ============================================
+     BORDURES & RAYONS (Élégants)
+     ============================================ */
+  
+  --border-radius-sm: 0.375rem;
+  --border-radius-base: 0.5rem;
+  --border-radius-md: 0.75rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 1.25rem;
+  --border-radius-2xl: 1.5rem;
+  --border-radius-3xl: 2rem;
+  --border-radius-full: 9999px;
+  
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-3: 3px;
+  
+  /* ============================================
+     ESPACEMENTS (Généreux)
+     ============================================ */
+  
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  
+  /* ============================================
+     TYPOGRAPHIE (Raffinée)
+     ============================================ */
+  
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-family-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* ============================================
+     TRANSITIONS (Fluides)
+     ============================================ */
+  
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* ============================================
+     EFFETS SPÉCIAUX
+     ============================================ */
+  
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-blur: blur(16px);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+  
+  --backdrop-blur: blur(8px);
+  
+  /* ============================================
+     Z-INDEX
+     ============================================ */
+  
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-toast: 800;
+}
+
+/* ============================================
+   COMPOSANTS PROFESSIONNELS - BOUTONS
+   ============================================ */
+
+.btn-professional {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-6);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  text-decoration: none;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+}
+
+.btn-professional-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-professional-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-professional-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-professional-secondary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-professional-secondary:hover {
+  background: var(--color-secondary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-professional-accent {
+  background: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: var(--shadow-accent);
+}
+
+.btn-professional-accent:hover {
+  background: var(--color-accent-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-professional-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-professional-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.btn-professional-ghost {
+  background: transparent;
+  color: var(--color-primary);
+  border: none;
+}
+
+.btn-professional-ghost:hover {
+  background: var(--color-primary-50);
+  color: var(--color-primary-dark);
+}
+
+/* ============================================
+   COMPOSANTS PROFESSIONNELS - CARTES
+   ============================================ */
+
+.card-professional {
+  background: var(--color-white);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border: 1px solid var(--color-gray-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-professional::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.card-professional:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-gray-300);
+}
+
+.card-professional:hover::before {
+  transform: scaleX(1);
+}
+
+.card-professional-elevated {
+  box-shadow: var(--shadow-lg);
+  border: none;
+}
+
+.card-professional-elevated:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.card-professional-minimal {
+  background: transparent;
+  border: 1px solid var(--color-gray-200);
+  box-shadow: none;
+}
+
+.card-professional-minimal:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-50);
+}
+
+/* ============================================
+   COMPOSANTS PROFESSIONNELS - BADGES
+   ============================================ */
+
+.badge-professional {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.badge-professional-primary {
+  background: var(--color-primary-100);
+  color: var(--color-primary-800);
+  border: 1px solid var(--color-primary-200);
+}
+
+.badge-professional-secondary {
+  background: var(--color-secondary-100);
+  color: var(--color-secondary-800);
+  border: 1px solid var(--color-secondary-200);
+}
+
+.badge-professional-accent {
+  background: var(--color-accent-100);
+  color: var(--color-accent-800);
+  border: 1px solid var(--color-accent-200);
+}
+
+.badge-professional-success {
+  background: var(--color-success-100);
+  color: var(--color-success-800);
+  border: 1px solid var(--color-success-200);
+}
+
+/* ============================================
+   COMPOSANTS PROFESSIONNELS - INPUTS
+   ============================================ */
+
+.input-professional {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-lg);
+  transition: all var(--transition-base);
+}
+
+.input-professional:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.input-professional::placeholder {
+  color: var(--color-gray-400);
+}
+
+/* ============================================
+   ANIMATIONS PROFESSIONNELLES
+   ============================================ */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out;
+}
+
+/* ============================================
+   UTILITAIRES PROFESSIONNELS
+   ============================================ */
+
+.text-professional-primary {
+  color: var(--color-primary);
+}
+
+.text-professional-secondary {
+  color: var(--color-secondary);
+}
+
+.text-professional-accent {
+  color: var(--color-accent);
+}
+
+.bg-professional-subtle {
+  background: var(--gradient-subtle);
+}
+
+.divider-professional {
+  height: 1px;
+  background: var(--color-gray-200);
+  margin: var(--spacing-6) 0;
+}
+
+.divider-professional-vertical {
+  width: 1px;
+  background: var(--color-gray-200);
+  margin: 0 var(--spacing-6);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .card-professional {
+    padding: var(--spacing-4);
+    border-radius: var(--border-radius-lg);
+  }
+  
+  .btn-professional {
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: 0.75rem;
+  }
+}
+
+

@@ -1,0 +1,39 @@
+# =============================================================================
+# Social Hub – Hébergement via Docker Compose
+# Usage sur le serveur : docker compose up -d --build
+# =============================================================================
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: socialhub-app
+    restart: unless-stopped
+    ports:
+      - "3100:3000"
+    environment:
+      NODE_ENV: production
+      MONGODB_URI: mongodb://mongodb:27017/socialhub
+      LOCAL_UPLOAD_DIR: /app/uploads
+      APP_URL: http://localhost:3100
+    volumes:
+      - ./public/uploads:/app/uploads
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+  mongodb:
+    image: mongo:7
+    container_name: socialhub-mongodb
+    restart: unless-stopped
+    volumes:
+      - social_mongodb_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  social_mongodb_data:

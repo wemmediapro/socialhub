@@ -1,0 +1,598 @@
+/* ============================================
+   NOUVEAU DESIGN SYSTEM - SocialHub Global V5
+   Style Moderne & Innovant - Refonte Complète
+   ============================================ */
+
+:root {
+  /* ============================================
+     NOUVELLE PALETTE - COULEURS MODERNES
+     ============================================ */
+  
+  /* Primary - Electric Blue (énergique) */
+  --color-primary-50: #e0f2fe;
+  --color-primary-100: #bae6fd;
+  --color-primary-200: #7dd3fc;
+  --color-primary-300: #38bdf8;
+  --color-primary-400: #0ea5e9;
+  --color-primary-500: #0284c7;
+  --color-primary-600: #0369a1;
+  --color-primary-700: #075985;
+  --color-primary-800: #0c4a6e;
+  --color-primary-900: #082f49;
+  
+  --color-primary: var(--color-primary-500);
+  --color-primary-dark: var(--color-primary-600);
+  --color-primary-light: var(--color-primary-400);
+  
+  /* Secondary - Vibrant Purple (créatif) */
+  --color-secondary-50: #faf5ff;
+  --color-secondary-100: #f3e8ff;
+  --color-secondary-200: #e9d5ff;
+  --color-secondary-300: #d8b4fe;
+  --color-secondary-400: #c084fc;
+  --color-secondary-500: #a855f7;
+  --color-secondary-600: #9333ea;
+  --color-secondary-700: #7e22ce;
+  --color-secondary-800: #6b21a8;
+  --color-secondary-900: #581c87;
+  
+  --color-secondary: var(--color-secondary-500);
+  --color-secondary-dark: var(--color-secondary-600);
+  --color-secondary-light: var(--color-secondary-400);
+  
+  /* Accent - Neon Green (futuriste) */
+  --color-accent-50: #f0fdf4;
+  --color-accent-100: #dcfce7;
+  --color-accent-200: #bbf7d0;
+  --color-accent-300: #86efac;
+  --color-accent-400: #4ade80;
+  --color-accent-500: #22c55e;
+  --color-accent-600: #16a34a;
+  --color-accent-700: #15803d;
+  --color-accent-800: #166534;
+  --color-accent-900: #14532d;
+  
+  --color-accent: var(--color-accent-500);
+  
+  /* Tertiary - Coral Pink (chaleureux) */
+  --color-tertiary-50: #fff1f2;
+  --color-tertiary-100: #ffe4e6;
+  --color-tertiary-200: #fecdd3;
+  --color-tertiary-300: #fda4af;
+  --color-tertiary-400: #fb7185;
+  --color-tertiary-500: #f43f5e;
+  --color-tertiary-600: #e11d48;
+  --color-tertiary-700: #be123c;
+  --color-tertiary-800: #9f1239;
+  --color-tertiary-900: #881337;
+  
+  --color-tertiary: var(--color-tertiary-500);
+  
+  /* ============================================
+     COULEURS FONCTIONNELLES
+     ============================================ */
+  
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  
+  /* ============================================
+     COULEURS NEUTRES (Fond sombre)
+     ============================================ */
+  
+  --color-bg-primary: #0a0a0f;
+  --color-bg-secondary: #14141f;
+  --color-bg-tertiary: #1a1a2e;
+  --color-bg-card: #1e1e2e;
+  --color-bg-hover: #252538;
+  
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0b8;
+  --color-text-tertiary: #6b6b8a;
+  
+  --color-border: #2a2a3e;
+  --color-border-light: #3a3a4e;
+  
+  /* ============================================
+     DÉGRADÉS MODERNES & VIBRANTS
+     ============================================ */
+  
+  --gradient-primary: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #38bdf8 100%);
+  --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #e9d5ff 100%);
+  --gradient-accent: linear-gradient(135deg, #22c55e 0%, #4ade80 50%, #86efac 100%);
+  --gradient-tertiary: linear-gradient(135deg, #f43f5e 0%, #fb7185 50%, #fda4af 100%);
+  --gradient-rainbow: linear-gradient(135deg, #0284c7 0%, #a855f7 25%, #22c55e 50%, #f43f5e 75%, #f59e0b 100%);
+  --gradient-dark: linear-gradient(135deg, #0a0a0f 0%, #14141f 50%, #1a1a2e 100%);
+  --gradient-card: linear-gradient(135deg, #1e1e2e 0%, #252538 100%);
+  
+  /* ============================================
+     OMBRES NEON & GLOW
+     ============================================ */
+  
+  --shadow-neon-blue: 0 0 20px rgba(2, 132, 199, 0.5), 0 0 40px rgba(2, 132, 199, 0.3);
+  --shadow-neon-purple: 0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(168, 85, 247, 0.3);
+  --shadow-neon-green: 0 0 20px rgba(34, 197, 94, 0.5), 0 0 40px rgba(34, 197, 94, 0.3);
+  --shadow-neon-pink: 0 0 20px rgba(244, 63, 94, 0.5), 0 0 40px rgba(244, 63, 94, 0.3);
+  
+  --shadow-glow-blue: 0 0 30px rgba(2, 132, 199, 0.6);
+  --shadow-glow-purple: 0 0 30px rgba(168, 85, 247, 0.6);
+  --shadow-glow-green: 0 0 30px rgba(34, 197, 94, 0.6);
+  
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --shadow-card-hover: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  
+  /* ============================================
+     BORDURES & RAYONS
+     ============================================ */
+  
+  --border-radius-sm: 0.5rem;
+  --border-radius-base: 0.75rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 1.5rem;
+  --border-radius-xl: 2rem;
+  --border-radius-2xl: 3rem;
+  --border-radius-full: 9999px;
+  
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-3: 3px;
+  
+  /* ============================================
+     ESPACEMENTS
+     ============================================ */
+  
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  
+  /* ============================================
+     TYPOGRAPHIE MODERNE
+     ============================================ */
+  
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  
+  /* ============================================
+     TRANSITIONS FLUIDES
+     ============================================ */
+  
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* ============================================
+     EFFETS SPÉCIAUX
+     ============================================ */
+  
+  --glass-bg: rgba(30, 30, 46, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(20px);
+  
+  --backdrop-blur: blur(12px);
+  
+  /* ============================================
+     Z-INDEX
+     ============================================ */
+  
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-toast: 800;
+}
+
+/* ============================================
+   RESET GLOBAL - FOND SOMBRE
+   ============================================ */
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+}
+
+/* ============================================
+   COMPOSANTS - BOUTONS MODERNES
+   ============================================ */
+
+.btn-new {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-6);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.btn-new::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-new:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-new-primary {
+  background: var(--gradient-primary);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-neon-blue);
+}
+
+.btn-new-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-neon-blue), var(--shadow-glow-blue);
+}
+
+.btn-new-secondary {
+  background: var(--gradient-secondary);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-neon-purple);
+}
+
+.btn-new-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-neon-purple), var(--shadow-glow-purple);
+}
+
+.btn-new-accent {
+  background: var(--gradient-accent);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-neon-green);
+}
+
+.btn-new-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-neon-green), var(--shadow-glow-green);
+}
+
+.btn-new-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-new-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-neon-blue);
+  transform: translateY(-2px);
+}
+
+.btn-new-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.btn-new-ghost:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-primary);
+  border-color: var(--color-primary);
+}
+
+/* ============================================
+   COMPOSANTS - CARTES MODERNES
+   ============================================ */
+
+.card-new {
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-base);
+  border: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-new::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.card-new:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-primary);
+}
+
+.card-new:hover::before {
+  transform: scaleX(1);
+}
+
+.card-new-gradient {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border-light);
+}
+
+.card-new-glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+}
+
+.card-new-elevated {
+  box-shadow: var(--shadow-card-hover);
+  border: 1px solid var(--color-primary);
+}
+
+.card-new-elevated::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius-xl);
+  padding: 1px;
+  background: var(--gradient-primary);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.card-new-elevated:hover::after {
+  opacity: 1;
+}
+
+/* ============================================
+   COMPOSANTS - BADGES MODERNES
+   ============================================ */
+
+.badge-new {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.badge-new-primary {
+  background: var(--gradient-primary);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-neon-blue);
+}
+
+.badge-new-secondary {
+  background: var(--gradient-secondary);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-neon-purple);
+}
+
+.badge-new-accent {
+  background: var(--gradient-accent);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-neon-green);
+}
+
+.badge-new-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.badge-new-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+/* ============================================
+   COMPOSANTS - INPUTS MODERNES
+   ============================================ */
+
+.input-new {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  transition: all var(--transition-base);
+}
+
+.input-new:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2), var(--shadow-neon-blue);
+  background: var(--color-bg-tertiary);
+}
+
+.input-new::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+/* ============================================
+   ANIMATIONS MODERNES
+   ============================================ */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-neon {
+  0%, 100% {
+    box-shadow: var(--shadow-neon-blue);
+  }
+  50% {
+    box-shadow: var(--shadow-glow-blue);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.2);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-neon {
+  animation: pulse-neon 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.animate-glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   UTILITAIRES MODERNES
+   ============================================ */
+
+.gradient-text-new {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--font-weight-bold);
+}
+
+.gradient-text-rainbow {
+  background: var(--gradient-rainbow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.neon-border {
+  position: relative;
+  border: 1px solid var(--color-border);
+}
+
+.neon-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: var(--gradient-primary);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.neon-border:hover::before {
+  opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .card-new {
+    padding: var(--spacing-4);
+    border-radius: var(--border-radius-lg);
+  }
+  
+  .btn-new {
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--font-size-xs);
+  }
+}
+
+

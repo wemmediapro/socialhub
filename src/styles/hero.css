@@ -1,0 +1,153 @@
+/* ============================================
+   HERO PARTAGÉ – Fond blanc, contour, bleu foncé (écriture + bouton)
+   ============================================ */
+
+.page-hero {
+  margin-bottom: var(--spacing-5);
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-8);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  box-sizing: border-box;
+}
+
+.page-hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.page-hero .page-hero-breadcrumbs {
+  font-size: 0.6875rem;
+  color: var(--color-primary-700);
+  margin-bottom: var(--spacing-1);
+  letter-spacing: 0.02em;
+}
+
+.page-hero .page-hero-breadcrumbs nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.page-hero .page-hero-breadcrumbs a {
+  color: var(--color-primary-600);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.page-hero .page-hero-breadcrumbs a:hover {
+  color: var(--color-primary-800);
+}
+
+.page-hero .page-hero-breadcrumbs .breadcrumb-current {
+  color: var(--color-primary-800);
+  font-weight: 500;
+}
+
+.page-hero .page-hero-breadcrumbs .breadcrumb-separator {
+  color: var(--color-primary-600);
+}
+
+.page-hero-title {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  font-weight: 700;
+  color: var(--color-primary-700);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 0.125rem 0;
+}
+
+.page-hero-subtitle {
+  font-size: 0.8125rem;
+  color: var(--color-primary-800);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 520px;
+}
+
+.page-hero-actions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.page-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-5);
+  min-height: 44px;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-white);
+  background: var(--color-button);
+  border: none;
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.page-hero-btn:hover {
+  color: var(--color-white);
+  background: var(--color-button-hover);
+}
+
+.page-hero-btn:active {
+  background: var(--color-button-active);
+}
+
+/* ----- Mobile : éviter débordement et améliorer mise en page ----- */
+@media (max-width: 1024px) {
+  .page-hero {
+    padding: var(--spacing-3) var(--spacing-4);
+    border-radius: var(--border-radius-base);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero {
+    padding: var(--spacing-3) var(--spacing-3);
+    border-radius: var(--border-radius-sm);
+  }
+
+  .page-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+
+  .page-hero-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .page-hero-btn {
+    min-height: 44px;
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--font-size-base);
+  }
+
+  .page-hero-subtitle {
+    max-width: 100%;
+  }
+}

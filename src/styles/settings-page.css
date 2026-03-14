@@ -1,0 +1,1009 @@
+/* ============================================
+   SETTINGS PAGE – Style dashboard, ergonomie moderne
+   ============================================ */
+
+.settings-page {
+  min-height: 100%;
+  padding-bottom: var(--spacing-12);
+}
+
+/* Section formulaire utilisateur */
+.settings-form-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+  transition: border-color 0.15s ease;
+}
+
+.settings-form-card:hover {
+  border-color: var(--color-text-tertiary);
+}
+
+.settings-form-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--spacing-5) 0;
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.settings-form-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-5);
+  margin-bottom: var(--spacing-5);
+}
+
+@media (min-width: 640px) {
+  .settings-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.settings-label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings-label-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--color-gray-100);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.settings-input-wrap {
+  position: relative;
+}
+
+.settings-input,
+.settings-input-wrap input {
+  width: 100%;
+  font-size: 0.9375rem;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  color: var(--color-text-primary);
+  background: var(--color-white);
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+  font-family: inherit;
+}
+
+.settings-input:focus,
+.settings-input-wrap input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.settings-input-wrap input[type="password"],
+.settings-input-wrap input[type="text"].settings-password {
+  padding-right: 2.75rem;
+}
+
+.settings-toggle-password {
+  position: absolute;
+  right: var(--spacing-3);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  border-radius: var(--border-radius-base);
+  transition: color 0.12s ease, background 0.12s ease;
+}
+
+.settings-toggle-password:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-hover);
+}
+
+/* Rôles en cartes cliquables */
+.settings-roles-label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-4);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings-roles-label .settings-label-icon {
+  flex-shrink: 0;
+}
+
+.settings-roles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+@media (min-width: 640px) {
+  .settings-roles-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.settings-role-card {
+  padding: var(--spacing-4);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  background: var(--color-white);
+  text-align: center;
+}
+
+.settings-role-card:hover {
+  border-color: var(--color-text-tertiary);
+  background: var(--color-bg-hover);
+}
+
+.settings-role-card.is-selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-50);
+}
+
+.settings-role-card.is-selected .settings-role-icon-wrap {
+  background: var(--color-primary);
+  color: white;
+}
+
+.settings-role-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-3);
+  background: var(--color-gray-100);
+  color: var(--color-text-tertiary);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.settings-role-card:hover .settings-role-icon-wrap {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.settings-role-card.is-selected .settings-role-icon-wrap {
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+}
+
+.settings-role-card:not(.is-selected) .settings-role-icon-wrap {
+  background: var(--color-gray-100);
+  color: var(--color-text-tertiary);
+}
+
+.settings-role-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.settings-role-card.is-selected .settings-role-label {
+  color: var(--color-primary);
+}
+
+/* Projets assignés */
+.settings-projects-label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-2);
+}
+
+.settings-projects-hint {
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--spacing-4);
+}
+
+.settings-projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-3);
+  max-height: 280px;
+  overflow-y: auto;
+  padding: var(--spacing-2);
+  background: var(--color-gray-50);
+  border-radius: var(--border-radius-base);
+  border: 1px solid var(--color-border);
+}
+
+.settings-project-chip {
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-project-chip:hover {
+  border-color: var(--color-text-tertiary);
+  background: var(--color-bg-hover);
+}
+
+.settings-project-chip.is-selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-50);
+}
+
+.settings-project-chip.is-selected .settings-project-name {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.settings-project-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.settings-form-actions {
+  display: flex;
+  gap: var(--spacing-3);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding-top: var(--spacing-5);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Grille utilisateurs par rôle */
+.settings-roles-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .settings-roles-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.settings-role-block {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  padding: var(--spacing-5);
+  transition: border-color 0.15s ease;
+}
+
+.settings-role-block:hover {
+  border-color: var(--color-text-tertiary);
+}
+
+.settings-role-block-head {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-5);
+}
+
+.settings-role-block-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-role-block:hover .settings-role-block-icon {
+  transform: scale(1.02);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.settings-role-block-title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--spacing-1) 0;
+}
+
+.settings-role-block-count {
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+  margin: 0;
+}
+
+/* Dropdown par rôle : clic sur le rôle ouvre/ferme la liste */
+.settings-role-block-dropdown {
+  padding: 0;
+  overflow: hidden;
+}
+
+.settings-role-block-dropdown .settings-role-block-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-5);
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.settings-role-block-dropdown .settings-role-block-trigger:hover {
+  background: var(--color-gray-50);
+}
+
+.settings-role-block-dropdown .settings-role-block-head-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.settings-role-block-chevron {
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+  transition: transform 0.2s ease;
+}
+
+.settings-role-block-chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.settings-role-block-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out;
+}
+
+.settings-role-block-content.is-open {
+  max-height: 1200px;
+  transition: max-height 0.4s ease-in;
+}
+
+.settings-role-block-dropdown .settings-role-block-content > .settings-empty-state,
+.settings-role-block-dropdown .settings-role-block-content > .settings-user-list {
+  padding: 0 var(--spacing-5) var(--spacing-5);
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.settings-user-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.settings-user-card {
+  padding: var(--spacing-4);
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.settings-user-card:hover {
+  border-color: var(--color-text-tertiary);
+  background: var(--color-white);
+}
+
+.settings-user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.settings-user-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-1);
+}
+
+.settings-user-meta {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--spacing-1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings-user-meta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--color-white);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+}
+
+.settings-user-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+}
+
+.settings-user-project-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.6875rem;
+  padding: var(--spacing-1) var(--spacing-2);
+  background: var(--color-primary);
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.settings-user-project-tag svg {
+  flex-shrink: 0;
+  opacity: 0.95;
+}
+
+.settings-user-actions {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-shrink: 0;
+}
+
+.settings-btn-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.settings-btn-icon svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.settings-btn-icon:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-primary);
+  border-color: var(--color-text-tertiary);
+  transform: translateY(-1px);
+}
+
+.settings-btn-icon.settings-btn-edit:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-50);
+}
+
+.settings-btn-icon.settings-btn-delete:hover {
+  border-color: var(--color-red-500, #ef4444);
+  color: var(--color-red-600, #dc2626);
+  background: var(--color-red-50, #fef2f2);
+}
+
+.settings-empty-state {
+  text-align: center;
+  padding: var(--spacing-8);
+  color: var(--color-text-tertiary);
+}
+
+.settings-empty-state svg {
+  opacity: 0.25;
+  margin-bottom: var(--spacing-4);
+}
+
+.settings-empty-state p {
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+/* Section Test email */
+.settings-test-email-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.settings-test-email-card:hover {
+  border-color: var(--color-primary-200);
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.08);
+}
+
+.settings-test-email-title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 var(--spacing-1) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  letter-spacing: -0.02em;
+}
+
+.settings-test-email-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-5) 0;
+  padding-left: 0;
+  line-height: 1.45;
+}
+
+.settings-test-email-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--color-primary-100) 0%, var(--color-primary-50) 100%);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.settings-test-email-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-gray-100);
+  color: var(--color-text-tertiary);
+  margin-left: auto;
+  cursor: help;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.settings-test-email-info:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-50);
+}
+
+.settings-test-email-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+}
+
+@media (min-width: 640px) {
+  .settings-test-email-form {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--spacing-5);
+  }
+  .settings-test-email-form .settings-test-email-grid {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  .settings-test-email-form .settings-test-email-actions {
+    flex-shrink: 0;
+  }
+}
+
+.settings-test-email-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-4);
+  margin-bottom: 0;
+}
+
+@media (min-width: 480px) {
+  .settings-test-email-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.settings-test-email-actions .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--spacing-3) var(--spacing-5);
+  font-weight: 600;
+  border-radius: var(--border-radius-base);
+  white-space: nowrap;
+}
+
+/* Section Permissions – dropdown repliable (bannière bleue) */
+.settings-permissions-dropdown {
+  border: none;
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.settings-permissions-dropdown-trigger {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: var(--spacing-5) var(--spacing-6);
+  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary) 100%);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-permissions-dropdown-trigger:hover {
+  background: linear-gradient(135deg, var(--color-primary-700, var(--color-primary-600)) 0%, var(--color-primary-600) 100%);
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.25);
+}
+
+.settings-permissions-dropdown-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.settings-permissions-dropdown-title span {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.settings-permissions-dropdown-title svg {
+  color: rgba(255, 255, 255, 0.95);
+  flex-shrink: 0;
+}
+
+.settings-permissions-dropdown-icon {
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.settings-permissions-dropdown-icon.is-open {
+  transform: rotate(180deg);
+}
+
+.settings-permissions-dropdown-subtitle {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin: var(--spacing-2) 0 0 0;
+  padding-left: 0;
+  max-width: 560px;
+  line-height: 1.4;
+}
+
+.settings-permissions-dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out;
+}
+
+.settings-permissions-dropdown-content.is-open {
+  max-height: 2200px;
+  transition: max-height 0.4s ease-in;
+}
+
+.settings-permissions-dropdown-content .settings-permissions-dropdown-actions {
+  padding: var(--spacing-4) var(--spacing-5) 0;
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+}
+
+.settings-permissions-dropdown-content > .settings-empty-state,
+.settings-permissions-dropdown-content > .settings-permissions-cards {
+  padding: 0 var(--spacing-5) var(--spacing-5);
+  padding-top: var(--spacing-4);
+}
+
+.settings-permissions-dropdown-content .settings-permissions-dropdown-actions + .settings-empty-state,
+.settings-permissions-dropdown-content .settings-permissions-dropdown-actions + .settings-permissions-cards {
+  padding-top: var(--spacing-4);
+}
+
+/* Section Permissions – cartes par rôle, groupes de pages */
+.settings-permissions-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+}
+.settings-permissions-save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.settings-permissions-loading {
+  padding: 3rem 2rem;
+  grid-column: 1 / -1;
+}
+
+.settings-permissions-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-5);
+}
+@media (min-width: 900px) {
+  .settings-permissions-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .settings-permissions-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.settings-perm-role-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.settings-perm-role-card:hover {
+  border-color: var(--color-text-tertiary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.settings-perm-role-card-header {
+  padding: var(--spacing-4) var(--spacing-5);
+  background: var(--color-gray-50);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+.settings-perm-role-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.settings-perm-role-card-body {
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.settings-perm-group {
+  border-radius: var(--border-radius-base);
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+.settings-perm-group-title {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+.settings-perm-group-pages {
+  padding: var(--spacing-2);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.settings-perm-page-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: 6px;
+  transition: background 0.12s ease;
+}
+.settings-perm-page-row:hover {
+  background: var(--color-white);
+}
+.settings-perm-page-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  flex: 1;
+  min-width: 0;
+}
+
+.settings-perm-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.settings-perm-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.settings-perm-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-50);
+}
+.settings-perm-toggle.is-checked {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: white;
+}
+.settings-perm-toggle.is-checked:hover {
+  background: var(--color-primary);
+  filter: brightness(1.05);
+}
+.settings-perm-toggle .settings-perm-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.settings-perm-toggle-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.settings-permissions-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-tertiary);
+  margin: 0 0 var(--spacing-4) 0;
+  max-width: 720px;
+}
+.settings-permissions-head .settings-permissions-subtitle {
+  margin-bottom: 0;
+}
+
+.settings-permissions-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  background: var(--color-white);
+}
+
+.settings-permissions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.settings-permissions-table th,
+.settings-permissions-table td {
+  padding: var(--spacing-3) var(--spacing-3);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.settings-permissions-table th {
+  background: var(--color-gray-50);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.settings-permissions-table th:first-child,
+.settings-permissions-table td:first-child {
+  text-align: left;
+  position: sticky;
+  left: 0;
+  background: var(--color-white);
+  z-index: 1;
+  min-width: 140px;
+}
+
+.settings-permissions-table th:first-child {
+  background: var(--color-gray-50);
+}
+
+.settings-permissions-table tbody tr:hover td {
+  background: var(--color-bg-hover);
+}
+
+.settings-permissions-table tbody tr:hover td:first-child {
+  background: var(--color-bg-hover);
+}
+
+.settings-perm-yes {
+  color: var(--color-success, #059669);
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.settings-perm-no {
+  color: var(--color-text-tertiary);
+  font-size: 1rem;
+}
+
+.settings-role-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--color-primary-100);
+  color: var(--color-primary);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* Checkbox (caché, utilisé par les toggles) */
+.settings-perm-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}

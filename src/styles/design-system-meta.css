@@ -1,0 +1,543 @@
+/* ============================================
+   DESIGN SYSTEM META - SocialHub Global V5
+   Style Meta/Facebook - Minimaliste & Épuré
+   ============================================ */
+
+:root {
+  /* ============================================
+     PALETTE META - COULEURS OFFICIELLES
+     ============================================ */
+  
+  /* Primary - Meta Blue (couleur signature) */
+  --color-primary-50: #e7f3ff;
+  --color-primary-100: #cce7ff;
+  --color-primary-200: #99cfff;
+  --color-primary-300: #66b7ff;
+  --color-primary-400: #339fff;
+  --color-primary-500: #1877f2;
+  --color-primary-600: #1460c2;
+  --color-primary-700: #0f4992;
+  --color-primary-800: #0a3262;
+  --color-primary-900: #051b32;
+  
+  --color-primary: var(--color-primary-500);
+  --color-primary-dark: var(--color-primary-600);
+  --color-primary-light: var(--color-primary-400);
+  
+  /* Bleu boutons (plus vif) */
+  --color-button: #2563eb;
+  --color-button-hover: #1d4ed8;
+  --color-button-active: #1e40af;
+  
+  /* Secondary - Gray (neutre Meta) */
+  --color-secondary-50: #f0f2f5;
+  --color-secondary-100: #e4e6eb;
+  --color-secondary-200: #d8dadf;
+  --color-secondary-300: #bcc0c4;
+  --color-secondary-400: #8a8d91;
+  --color-secondary-500: #65676b;
+  --color-secondary-600: #4e4f50;
+  --color-secondary-700: #373839;
+  --color-secondary-800: #202122;
+  --color-secondary-900: #0a0a0b;
+  
+  --color-secondary: var(--color-secondary-500);
+  --color-secondary-dark: var(--color-secondary-600);
+  --color-secondary-light: var(--color-secondary-400);
+  
+  /* Accent - Green (succès Meta) */
+  --color-accent-50: #e6f7e6;
+  --color-accent-100: #ccefcc;
+  --color-accent-200: #99df99;
+  --color-accent-300: #66cf66;
+  --color-accent-400: #33bf33;
+  --color-accent-500: #00af00;
+  --color-accent-600: #008c00;
+  --color-accent-700: #006900;
+  --color-accent-800: #004600;
+  --color-accent-900: #002300;
+  
+  --color-accent: var(--color-accent-500);
+  
+  /* ============================================
+     COULEURS FONCTIONNELLES (Meta Style)
+     ============================================ */
+  
+  --color-success: #42b72a;
+  --color-success-50: #e6f7e6;
+  --color-success-100: #ccefcc;
+  --color-warning: #f7b928;
+  --color-error: #f02849;
+  --color-error-50: #fee2e2;
+  --color-info: #1877f2;
+  
+  /* ============================================
+     COULEURS NEUTRES (Fond clair Meta)
+     ============================================ */
+  
+  --color-white: #ffffff;
+  --color-black: #050505;
+  
+  --color-gray-50: #f0f2f5;
+  --color-gray-100: #e4e6eb;
+  --color-gray-200: #d8dadf;
+  --color-gray-300: #bcc0c4;
+  --color-gray-400: #8a8d91;
+  --color-gray-500: #65676b;
+  --color-gray-600: #4e4f50;
+  --color-gray-700: #373839;
+  --color-gray-800: #242526;
+  --color-gray-900: #18191a;
+  
+  --color-bg-primary: #f0f2f5;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #e4e6eb;
+  --color-bg-hover: #f2f3f5;
+  /* Surface légère pour fond de page (dégradé très subtil) */
+  --color-bg-page: linear-gradient(180deg, #f5f6f8 0%, #f0f2f5 100%);
+  
+  --color-text-primary: #050505;
+  --color-text-secondary: #65676b;
+  --color-text-tertiary: #8a8d91;
+  
+  --color-border: #dadde1;
+  --color-border-light: #e4e6eb;
+  
+  /* ============================================
+     DÉGRADÉS META (Subtils)
+     ============================================ */
+  
+  --gradient-primary: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%);
+  --gradient-subtle: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
+  --gradient-hover: linear-gradient(180deg, #f2f3f5 0%, #e4e6eb 100%);
+  
+  /* ============================================
+     OMBRES META (Très subtiles)
+     ============================================ */
+  
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.07);
+  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.08);
+  
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-card-subtle: 0 2px 8px rgba(0, 0, 0, 0.03);
+  /* Effet "flottant" moderne */
+  --shadow-surface: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-surface-hover: 0 12px 32px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
+  
+  /* Ombre accent primary (boutons, avatars) */
+  --shadow-primary: 0 2px 8px rgba(24, 119, 242, 0.25), 0 1px 2px rgba(0, 0, 0, 0.08);
+  
+  /* Opacités */
+  --opacity-50: 0.5;
+  --opacity-70: 0.7;
+  --opacity-90: 0.9;
+  
+  /* ============================================
+     BORDURES & RAYONS (Meta Style)
+     ============================================ */
+  
+  --border-radius-sm: 0.5rem;
+  --border-radius-base: 0.75rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 1.25rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-2xl: 2rem;
+  --border-radius-3xl: 2.5rem;
+  --border-radius-full: 9999px;
+  
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  
+  /* ============================================
+     ESPACEMENTS (Réduits pour pages plus compactes)
+     ============================================ */
+  
+  --spacing-0: 0;
+  --spacing-1: 0.2rem;
+  --spacing-2: 0.375rem;
+  --spacing-3: 0.5rem;
+  --spacing-4: 0.75rem;
+  --spacing-5: 1rem;
+  --spacing-6: 1.125rem;
+  --spacing-8: 1.5rem;
+  --spacing-10: 1.875rem;
+  --spacing-12: 2.25rem;
+  --spacing-16: 3rem;
+  
+  /* ============================================
+     TYPOGRAPHIE META (Helvetica/System)
+     ============================================ */
+  
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-mono: 'SF Mono', 'Monaco', 'Courier New', monospace;
+  
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 0.9375rem;
+  --font-size-lg: 1.0625rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  --letter-spacing-normal: 0;
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-tighter: -0.02em;
+  --letter-spacing-wide: 0.025em;
+  
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.33;
+  --line-height-relaxed: 1.5;
+  
+  /* ============================================
+     TRANSITIONS (Rapides comme Meta)
+     ============================================ */
+  
+  --transition-fast: 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Courbes modernes (micro-interactions, hover) */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+  
+  /* Focus visible (accessibilité) */
+  --focus-ring: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-primary);
+  --focus-ring-offset: 2px;
+  
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-blur: blur(10px);
+  
+  /* ============================================
+     Z-INDEX
+     ============================================ */
+  
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-toast: 800;
+  
+  /* ============================================
+     LAYOUT DIMENSIONS
+     ============================================ */
+  
+  --sidebar-width: 260px;
+  --sidebar-width-collapsed: 70px;
+  --header-height: 60px;
+}
+
+/* ============================================
+   RESET GLOBAL - FOND CLAIR META
+   ============================================ */
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+}
+
+/* ============================================
+   COMPOSANTS - BOUTONS META
+   ============================================ */
+
+.btn-meta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-5);
+  min-height: 44px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  line-height: 1.33;
+}
+
+.btn-meta-primary {
+  background: var(--color-button);
+  color: var(--color-white);
+  box-shadow: none;
+}
+
+.btn-meta-primary:hover {
+  background: var(--color-button-hover);
+  filter: brightness(0.98);
+}
+
+.btn-meta-primary:active {
+  transform: scale(0.98);
+  background: var(--color-button-active);
+}
+
+.btn-meta-secondary {
+  background: var(--color-gray-200);
+  color: var(--color-text-primary);
+  box-shadow: none;
+}
+
+.btn-meta-secondary:hover {
+  background: var(--color-gray-300);
+}
+
+.btn-meta-outline {
+  background: transparent;
+  color: var(--color-button);
+  border: 1px solid var(--color-button);
+}
+
+.btn-meta-outline:hover {
+  background: var(--color-primary-50);
+}
+
+/* ============================================
+   COMPOSANTS - BADGES META
+   ============================================ */
+
+.badge-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--border-radius-base);
+  line-height: 1;
+}
+
+.badge-meta-primary {
+  background: var(--color-primary-50);
+  color: var(--color-primary);
+  border: none;
+}
+
+.badge-meta-secondary {
+  background: var(--color-gray-200);
+  color: var(--color-text-primary);
+  border: none;
+}
+
+.badge-meta-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+
+.badge-meta-outline:hover {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary);
+}
+
+.btn-meta-ghost {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: none;
+}
+
+.btn-meta-ghost:hover {
+  background: var(--color-bg-hover);
+}
+
+/* ============================================
+   COMPOSANTS - CARTES META
+   ============================================ */
+
+.card-meta {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-4);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--color-border);
+  position: relative;
+}
+
+.card-meta:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card-meta-elevated {
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+.card-meta-elevated:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.card-meta-minimal {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+}
+
+.card-meta-minimal:hover {
+  background: var(--color-bg-hover);
+  border-color: var(--color-border-light);
+}
+
+/* ============================================
+   COMPOSANTS - BADGES META
+   ============================================ */
+
+.badge-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--border-radius-full);
+  line-height: 1.33;
+}
+
+.badge-meta-primary {
+  background: var(--color-primary-50);
+  color: var(--color-primary);
+}
+
+.badge-meta-secondary {
+  background: var(--color-gray-100);
+  color: var(--color-text-secondary);
+}
+
+.badge-meta-success {
+  background: #e6f7e6;
+  color: var(--color-success);
+}
+
+.badge-meta-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+/* ============================================
+   COMPOSANTS - INPUTS META
+   ============================================ */
+
+.input-meta {
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-3);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  transition: all var(--transition-fast);
+  line-height: 1.33;
+}
+
+.input-meta:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-50);
+}
+
+.input-meta::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+/* ============================================
+   ANIMATIONS META (Subtiles)
+   ============================================ */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.2s ease-out;
+}
+
+/* ============================================
+   UTILITAIRES META
+   ============================================ */
+
+.text-meta-primary {
+  color: var(--color-primary);
+}
+
+.text-meta-secondary {
+  color: var(--color-text-secondary);
+}
+
+.bg-meta-primary {
+  background: var(--color-bg-primary);
+}
+
+.bg-meta-secondary {
+  background: var(--color-bg-secondary);
+}
+
+.divider-meta {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--spacing-4) 0;
+}
+
+.divider-meta-vertical {
+  width: 1px;
+  background: var(--color-border);
+  margin: 0 var(--spacing-4);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .card-meta {
+    padding: var(--spacing-3);
+    border-radius: var(--border-radius-base);
+  }
+  
+  .btn-meta {
+    padding: var(--spacing-2) var(--spacing-4);
+    min-height: 40px;
+    font-size: var(--font-size-base);
+  }
+}
+
