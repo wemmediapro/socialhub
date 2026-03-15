@@ -246,7 +246,7 @@ export default function PostsListPage() {
                           onKeyDown={(e) => e.key === "Enter" && window.open(normalizedUrl, "_blank")}
                         >
                           {isVideo ? (
-                            <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                            <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
                           ) : (
                             <img src={normalizedUrl} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                           )}

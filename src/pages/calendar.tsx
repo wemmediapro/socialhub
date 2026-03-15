@@ -771,7 +771,7 @@ export default function CalendarPage(): React.JSX.Element {
                                                 }}
                                               >
                                                 {normalizedUrl.match(/\.mp4($|\?)/i) ? (
-                                                  <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                                                  <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
                                                 ) : (
                                                   <img src={normalizedUrl} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                                                 )}
@@ -930,7 +930,7 @@ export default function CalendarPage(): React.JSX.Element {
                                             }}
                                           >
                                             {normalizedUrl.match(/\.mp4($|\?)/i) ? (
-                                              <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                                              <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
                                             ) : (
                                               <img src={normalizedUrl} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                                             )}
@@ -1266,7 +1266,7 @@ export default function CalendarPage(): React.JSX.Element {
                           }}
                         >
                           {normalizedUrl.match(/\.mp4($|\?)/i) ? (
-                            <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                            <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
                           ) : (
                             <img src={normalizedUrl} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                           )}

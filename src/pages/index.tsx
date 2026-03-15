@@ -1482,7 +1482,7 @@ export default function Home() {
                               return (
                                 <div key={idx} className="post-detail-media-item" onClick={() => window.open(normalizedUrl, "_blank")}>
                                   {isVideo ? (
-                                    <video src={normalizedUrl} controls playsInline />
+                                    <video src={normalizedUrl} controls playsInline onClick={(e) => e.stopPropagation()} />
                                   ) : (
                                     <img src={normalizedUrl} alt="" />
                                   )}

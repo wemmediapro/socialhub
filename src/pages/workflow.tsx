@@ -1265,7 +1265,7 @@ export default function WorkflowPage() {
                                 }}
                               >
                                 {isVideo ? (
-                                  <video src={normalizedUrl} controls playsInline preload="metadata" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                                  <video src={normalizedUrl} controls playsInline preload="metadata" style={{ width: "100%", height: "100%", objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
                                 ) : (
                                   <img src={normalizedUrl} alt={`Media ${idx+1}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                                 )}
@@ -1811,7 +1811,7 @@ export default function WorkflowPage() {
                                         onClick={() => window.open(normalizedUrl, '_blank')}
                                       >
                                         {isVideo ? (
-                                          <video src={normalizedUrl} controls playsInline preload="metadata" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                                          <video src={normalizedUrl} controls playsInline preload="metadata" style={{ width: "100%", height: "100%", objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
                                         ) : (
                                           <img src={normalizedUrl} alt={`Media ${idx+1}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                                         )}
@@ -2192,7 +2192,7 @@ export default function WorkflowPage() {
                                   >
                                     {isVideo ? (
                                       <>
-                                        <video src={normalizedUrl} controls playsInline preload="metadata" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                                        <video src={normalizedUrl} controls playsInline preload="metadata" style={{ width: "100%", height: "100%", objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
                                         <button
                                           type="button"
                                           onClick={(e) => {

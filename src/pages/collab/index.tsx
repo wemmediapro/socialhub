@@ -1639,7 +1639,7 @@ export default function CollabWorkflowPage() {
                                     }}
                                   >
                                     {isVideo ? (
-                                      <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                                      <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
                                     ) : (
                                       <img src={normalizedUrl} alt={`Media ${idx+1}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                                     )}
@@ -2440,7 +2440,7 @@ export default function CollabWorkflowPage() {
                                       >
                                         {isVideo ? (
                                           <>
-                                            <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                                            <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
                                             <button
                                               type="button"
                                               onClick={(e) => {
@@ -2830,7 +2830,7 @@ export default function CollabWorkflowPage() {
                                       >
                                         {isVideo ? (
                                           <>
-                                            <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                                            <video src={normalizedUrl} controls playsInline style={{ width: "100%", height: "100%", objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
                                             <button
                                               type="button"
                                               onClick={(e) => {
